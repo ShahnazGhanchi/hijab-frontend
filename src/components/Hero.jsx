@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import hijabImage from "../assets/hijab.jpg";
+import hijabImage from "../assets/Hijab.jpg";
 const Hero = () => {
   const heroRef = useRef(null);
 

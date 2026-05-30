@@ -1,5 +1,5 @@
 import React from "react";
-import hijabImage from "../assets/hijab.jpg";
+import hijabImage from "../assets/Hijab.jpg";
 
 const About = () => {
   return (
