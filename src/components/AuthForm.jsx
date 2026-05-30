@@ -18,10 +18,12 @@ const AuthForm = ({ setToken }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // 1. .env file se Vercel ka backend URL get karein
+      const baseUrl = import.meta.env.VITE_API_URL;
+      // 2. Ab local link ki jagah dynamically live URL banayein
       const url = isLogin 
-        ? "http://localhost:8000/api/auth/login" 
-        : "http://localhost:8000/api/auth/register";
-
+        ? `${baseUrl}/api/auth/login` 
+        : `${baseUrl}/api/auth/register`;
       const requestData = isLogin 
         ? { email: formData.email, password: formData.password }
         : formData;
