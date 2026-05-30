@@ -15,7 +15,7 @@ const ProductDetail = () => {
   const getSingleProduct = async () => {
     try {
       const res = await axios.get(
-  `http://localhost:8000/api/products/${id}`
+  `https://hijab-backend-pink.vercel.app/api/products/${id}`
 );
       setProduct(res.data);
     } catch (error) {

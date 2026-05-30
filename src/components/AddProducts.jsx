@@ -43,7 +43,7 @@ const AddProduct = () => {
       data.append('image', image);
 
       const response = await axios.post(
-        'http://localhost:8000/api/products/add',
+        'https://hijab-backend-pink.vercel.app/api/products/add',
         data,
         {
           headers: {
@@ -71,7 +71,7 @@ const AddProduct = () => {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      `http://localhost:8000/api/products/${id}`,
+      `https://hijab-backend-pink.vercel.app/api/products/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`

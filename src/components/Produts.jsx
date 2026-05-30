@@ -11,7 +11,7 @@ const Products = () => {
     try {
 
       const response = await axios.get(
-        'http://localhost:8000/api/products/all'
+        'https://hijab-backend-pink.vercel.app/api/products/all'
       );
 
       setProducts(response.data);
@@ -32,7 +32,7 @@ const Products = () => {
     console.log(token);
 
     await axios.delete(
-      `http://localhost:8000/api/products/${id}`,
+      `https://hijab-backend-pink.vercel.app/api/products/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`
